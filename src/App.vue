@@ -5,6 +5,7 @@
   import ArticleCard from './components/ArticleCard.vue';
   import ModelProduct from './components/ModelProduct.vue';
   import ModelRelatedArticles from './components/ModelRelatedArticles.vue';
+  import CircleProcess from './components/CircleProcess.vue';
 
   const articles = reactive<dataType.article[]>(data.articles);
   const products = reactive<dataType.product[]>(data.products);
@@ -51,6 +52,8 @@
 </script>
 
 <template>
+  <!-- <CircleProcess :ratio="66"/> -->
+
   <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     <template v-for="(article, articleIdx) in articles">
       <ArticleCard :articleIdx="articleIdx"
